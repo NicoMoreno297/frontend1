@@ -1,36 +1,53 @@
-<FlexboxLayout class="page">
-	<StackLayout class="form">
-		<Image class="logo" src="~/images/logo1.jpg"></Image>
-		<Label class="header" text="MOVIE TV"></Label>
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <!--
+    The StackLayout stacks UI components on the screen—either vertically or horizontally.
+    In this case, the StackLayout does vertical stacking; you can change the stacking to
+    horizontal by applying a orientation="horizontal" attribute to the <StackLayout> element.
+    You can learn more about NativeScript layouts at
+    https://docs.nativescript.org/ui/layout-containers.
+    These components make use of several CSS class names that are part of the NativeScript
+    core theme, such as p-20, btn, h2, and text-center. You can view a full list of the
+    class names available for styling your app at https://docs.nativescript.org/ui/theme.
+    -->
+	<Page xmlns="http://schemas.nativescript.org/tns.xsd"  class="page">
+              
+		<StackLayout class="form">
+        <FlexboxLayout class="horizontal">
+            <Label class="lbl-blanco" text="Iniciar seción" ></Label>
+            <Label class="lbl-blanco2" text="│" ></Label>
+            <Label class="lbl"  ></Label>
+        </FlexboxLayout>
+            
+            <Image class="logo" src="~/images/LogoBlanco.png"></Image>
+            
+            <StackLayout class="input-field">
+                <TextField class="input" hint="Nombre" autocorrect="false" returnKeyType="next" ></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <TextField class="input" hint="Año de nacimiento" autocorrect="false" returnKeyType="next" ></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <TextField class="input" hint="Correo electrónico" autocorrect="false" returnKeyType="next" ></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <TextField class="input" hint="Contraseña" secure="true" autocorrect="false" returnKeyType="next" ></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+            </StackLayout>
 
-		<Label class="mensaje" text="La mejor sugerencia de películas"></Label>
-
-		<StackLayout class="input-field">
-			<TextField class="input" hint="Usuario" keyboardType="email" autocorrect="false" autocapitalizationType="none" [(ngModel)]="user.email"
-			 returnKeyType="next" (returnPress)="focusPassword()"></TextField>
-			<StackLayout class="hr-light"></StackLayout>
-		</StackLayout>
-
-		<StackLayout class="input-field">
-			<TextField #password class="input" hint="Contraseña" secure="true" [(ngModel)]="user.password" [returnKeyType]="isLoggingIn ? 'done' : 'next'"
-			 (returnPress)="focusConfirmPassword()"></TextField>
-			<StackLayout class="hr-light"></StackLayout>
-		</StackLayout>
-
-		<StackLayout *ngIf="!isLoggingIn" class="input-field">
-			<TextField #confirmPassword class="input" hint="Confirma tu contraseña" secure="true" [(ngModel)]="user.confirmPassword"
-			 returnKeyType="done"></TextField>
-			<StackLayout class="hr-light"></StackLayout>
-		</StackLayout>
-
-		<Button [text]="isLoggingIn ? 'INICIAR SESIÓN' : 'Registrar'" (tap)="submit()" class="btn btn-primary m-t-20"></Button>
-		<Label *ngIf="isLoggingIn" text="Olvidaste tu contraseña?" class="login-label" (tap)="forgotPassword()"></Label>
-	</StackLayout>
-
-	<Label class="login-label sign-up-label" (tap)="toggleForm()">
-		<FormattedString>
-			<Span [text]="isLoggingIn ? 'Don’t have an account? ' : 'Back to Login'"></Span>
-			<Span [text]="isLoggingIn ? 'Sign up' : ''" class="bold"></Span>
-		</FormattedString>
-	</Label>
-</FlexboxLayout>
+            <Button text='REGISTRARSE' class="btn-morado"></Button>
+            <Button text='Registrarse con Facebook' class="btn-azul"></Button>
+        </StackLayout>
+		
+</Page>
