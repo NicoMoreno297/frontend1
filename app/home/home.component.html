@@ -1,0 +1,15 @@
+<ActionBar title="Inicio"></ActionBar>
+<StackLayout orientation="vertical" >
+	<StackLayout orientation="horizontal">
+		<Image class="logo" src="~/images/seleccion.png"></Image>
+		<Button text="SUGERIR" (tap)="takePicture()" class="btn btn-primary m-t-20"></Button>
+	</StackLayout>
+	<StackLayout orientation="horizontal">
+		<Image class="logo" src="~/images/lista_(1).png"></Image>
+		<Button text="MI LISTA" (tap)="onButtonTap1()" class="btn btn-primary m-t-20"></Button>
+	</StackLayout>
+	<StackLayout orientation="horizontal">
+	<Image class="logo" src="~/images/busqueda.png"></Image>
+		<Button text="BUSCAR" (tap)="onButtonTap2()" class="btn btn-primary m-t-20"></Button>
+	</StackLayout>
+</StackLayout>

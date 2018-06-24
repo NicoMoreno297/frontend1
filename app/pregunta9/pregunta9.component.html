@@ -1,0 +1,17 @@
+<FlexboxLayout class="page">
+	<StackLayout class="form">
+		<Image class="logo" src="~/images/logo1.jpg"></Image>
+		<Label class="header" text="MOVIE TV"></Label>
+
+		<StackLayout class="input-field">
+			<Label text="Acentúas exageradamente las"></Label>
+			<Label text="palabras que consideras más"></Label>
+			<Label text="importantes en una "></Label>
+			<Label text="conversación."></Label>
+		</StackLayout>
+		'
+		<Button text="Si" (tap)="submit()" class="btn btn-primary m-t-20"></Button>
+		<Button text="No" (tap)="submit()" class="btn btn-primary m-t-20"></Button>
+	</StackLayout>
+	<Progress [value]="90" maxValue="100"></Progress>
+</FlexboxLayout>

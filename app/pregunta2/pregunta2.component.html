@@ -1,0 +1,17 @@
+<FlexboxLayout class="page">
+	<StackLayout class="form">
+		<Image class="logo" src="~/images/logo1.jpg"></Image>
+		<Label class="header" text="MOVIE TV"></Label>
+
+		<StackLayout class="input-field">
+			<Label text="Te desespera el tener que"></Label>
+			<Label text="hacer cola en un supermercado"></Label>
+			<Label text="o esperar mesa en un"></Label>
+			<Label text="restaurante."></Label>
+		</StackLayout>
+		'
+		<Button text="Si" (tap)="submit()" class="btn btn-primary m-t-20"></Button>
+		<Button text="No" (tap)="submit()" class="btn btn-primary m-t-20"></Button>
+	</StackLayout>
+	<Progress [value]="20" maxValue="100"></Progress>
+</FlexboxLayout>

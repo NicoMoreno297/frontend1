@@ -1,0 +1,36 @@
+<FlexboxLayout class="page">
+	<StackLayout class="form">
+		<Image class="logo" src="~/images/logo1.jpg"></Image>
+		<Label class="header" text="MOVIE TV"></Label>
+
+		<Label class="mensaje" text="La mejor sugerencia de películas"></Label>
+
+		<StackLayout class="input-field">
+			<TextField class="input" hint="Usuario" keyboardType="email" autocorrect="false" autocapitalizationType="none" [(ngModel)]="user.email"
+			 returnKeyType="next" (returnPress)="focusPassword()"></TextField>
+			<StackLayout class="hr-light"></StackLayout>
+		</StackLayout>
+
+		<StackLayout class="input-field">
+			<TextField #password class="input" hint="Contraseña" secure="true" [(ngModel)]="user.password" [returnKeyType]="isLoggingIn ? 'done' : 'next'"
+			 (returnPress)="focusConfirmPassword()"></TextField>
+			<StackLayout class="hr-light"></StackLayout>
+		</StackLayout>
+
+		<StackLayout *ngIf="!isLoggingIn" class="input-field">
+			<TextField #confirmPassword class="input" hint="Confirma tu contraseña" secure="true" [(ngModel)]="user.confirmPassword"
+			 returnKeyType="done"></TextField>
+			<StackLayout class="hr-light"></StackLayout>
+		</StackLayout>
+
+		<Button [text]="isLoggingIn ? 'INICIAR SESIÓN' : 'Registrar'" (tap)="submit()" class="btn btn-primary m-t-20"></Button>
+		<Label *ngIf="isLoggingIn" text="Olvidaste tu contraseña?" class="login-label" (tap)="forgotPassword()"></Label>
+	</StackLayout>
+
+	<Label class="login-label sign-up-label" (tap)="toggleForm()">
+		<FormattedString>
+			<Span [text]="isLoggingIn ? 'Don’t have an account? ' : 'Back to Login'"></Span>
+			<Span [text]="isLoggingIn ? 'Sign up' : ''" class="bold"></Span>
+		</FormattedString>
+	</Label>
+</FlexboxLayout>

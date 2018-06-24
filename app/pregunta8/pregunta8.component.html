@@ -1,0 +1,17 @@
+<FlexboxLayout class="page">
+	<StackLayout class="form">
+		<Image class="logo" src="~/images/logo1.jpg"></Image>
+		<Label class="header" text="MOVIE TV"></Label>
+
+		<StackLayout class="input-field">
+			<Label text="Te alteras al observar como"></Label>
+			<Label text="otras personas realizan tareas"></Label>
+			<Label text="que tú puedes hacer en menos"></Label>
+			<Label text="tiempo. "></Label>
+		</StackLayout>
+		'
+		<Button text="Si" (tap)="submit()" class="btn btn-primary m-t-20"></Button>
+		<Button text="No" (tap)="submit()" class="btn btn-primary m-t-20"></Button>
+	</StackLayout>
+	<Progress [value]="80" maxValue="100"></Progress>
+</FlexboxLayout>
