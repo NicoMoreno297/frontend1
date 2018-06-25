@@ -1,59 +1,78 @@
+/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme. 
+The imported CSS rules must precede all other types of rules.
+*/
+@import '~nativescript-theme-core/css/core.light.css';
+
+/*
+The following CSS rule changes the font size of all UI
+components that have the btn class name.
+*/
+.btn {
+    font-size: 18;
+}
+
+.horizontal{
+    display: inline;
+}
+
+Page{
+    background-image: url('~/images/fondo1.jpg');
+    background-size: 1500px 2500px;
+}
+
+.logo{
+    width: 600px;
+}
+
 .page {
-  align-items: center;
-  flex-direction: column;
-}
-.form {
-  margin-left: 30;
-  margin-right: 30;
-  flex-grow: 2;
-  vertical-align: middle;
-}
+    align-items: center;
+    flex-direction: column;
+  }
 
-.logo {
-  margin-bottom: 5;
-  height: 130;
-  font-weight: bold;
-}
-.header {
-  horizontal-align: center;
-  font-size: 25;
-  font-weight: 600;
-  margin-bottom: 30;
-  text-align: center;
-  color: #D51A1A;
-}
+  .form {
+    margin-left: 30;
+    margin-right: 30;
+    flex-grow: 2;
+    vertical-align: middle;
+  }
 
-.input-field {
-  margin-bottom: 25;
-}
-.input {
-  font-size: 18;
-  placeholder-color: #A8A8A8;
-}
+  .input-field{
+      color: white;
+  }
 
-.btn-primary {
-  height: 50;
-  margin: 30 5 15 5;
-  background-color: #D51A1A;
-  border-radius: 5;
-  font-size: 20;
-  font-weight: 600;
-}
-.login-label {
-  horizontal-align: center;
-  color: #A8A8A8;
-  font-size: 16;
-}
-.sign-up-label {
-  margin-bottom: 20;
-}
-.bold {
-  color: #000000; 
-}
-.mensaje{
-  color: #CCD1D1;
-  word-wrap: true;
-  display: inline;
-  text-align: center;
-  margin-bottom: 30;
-}
+  .lbl-blanco{
+    color: white;
+  }
+
+  .lbl-blanco2{
+    color: white;
+  }
+
+  .btn-morado {
+    height: 50;
+    margin: 30 35 15 35;
+    background-color: #7E57C2;
+    border-radius: 5;
+    font-size: 18;
+    font-weight: 500;
+    color: white;
+  }
+
+  .btn-azul{
+    height: 50;
+    margin: 30 35 15 35;
+    background-color: rgb(94, 4, 250);
+    border-radius: 5;
+    font-size: 12;
+    font-weight: 500;
+    color: white;
+  }
