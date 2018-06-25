@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { LoginComponent } from './login/login.component';
+import { LoginSComponent } from './loginS/loginS.component';
 import { SugerirComponent } from './sugerir/sugerir.component';
 import { MiListaComponent } from './milista/milista.component';
 import { BuscarComponent } from './Buscar/buscar.component';
@@ -21,6 +22,7 @@ import { FaceComponent } from './signface/signface.component';
 const routes: Routes = [
     { path: "", redirectTo: "/login", pathMatch: "full" },
     { path: "login", component: LoginComponent },
+    { path: "loginS", component: LoginSComponent },
     { path: "sugerir", component: SugerirComponent },
     { path: "milista", component: MiListaComponent },
     { path: "buscar", component: BuscarComponent },

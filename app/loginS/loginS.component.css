@@ -1,0 +1,78 @@
+.page {
+    flex-direction: column;
+    background-image: url("http://1.bp.blogspot.com/-hCjU8zE7RaE/U6P3sJdFO2I/AAAAAAAADKg/fH_BwBHouVo/s1600/chicos-blanco-negro-22.jpg");
+  }
+  .form {
+    flex-grow: 2;
+    vertical-align: middle;
+  }
+  .form1 {    
+    flex-grow: 6;
+    align-content: left;
+  }
+  .columna{
+    column-count: 5;
+    margin: 20px;
+  }
+  
+  .logo {    
+    margin-right: 200;
+    align-items: left;
+    height: 40;
+    margin-top: 5;
+  }
+  .header {
+    horizontal-align: center;
+    font-size: 25;
+    font-weight: 600;
+    margin-bottom: 30;
+    text-align: center;
+    color: #D51A1A;
+  }
+  
+  .input-field {
+    margin-left: 50;
+    margin-right: 50;
+    margin-bottom: 20;
+  }
+  .input {
+    padding: 30;
+    font-size: 18;
+    placeholder-color: #A8A8A8;
+  }
+  
+  .btn-primary {
+    height: 50;
+    margin: 30 5 15 5;
+    background-color: #512DA8;
+    border-radius: 5;
+    font-size: 20;
+    font-weight: 600;
+    margin-left: 50;
+    margin-right: 50;
+  }
+  .login-label {
+    color: #ffffff;
+    font-size: 16;
+    text-align: center;
+    margin-bottom: 40;
+  }
+  
+  .login-label1 {
+    color: #ffffff;
+    font-size: 16;
+    text-align: center;
+    margin-bottom: 20;
+  }
+  
+  .bold {
+    color: #f7f2f2; 
+  }
+  .mensaje{
+    color: #CCD1D1;
+    word-wrap: true;
+    display: inline;
+    text-align: center;
+    margin-bottom: 30;
+  }
+  

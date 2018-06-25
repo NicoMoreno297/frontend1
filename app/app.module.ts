@@ -6,6 +6,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
+import { LoginSComponent } from "./loginS/loginS.component";
 import { SugerirComponent } from "./sugerir/sugerir.component";
 import { MiListaComponent } from "./milista/milista.component";
 import { BuscarComponent } from "./Buscar/buscar.component";
@@ -37,6 +38,7 @@ import { UserService } from "./shared/user.service";
     declarations: [
         AppComponent,
         LoginComponent,
+        LoginSComponent,
         SugerirComponent,
         MiListaComponent,
         BuscarComponent,
