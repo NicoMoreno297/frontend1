@@ -1,62 +1,47 @@
-import { Component, ElementRef, ViewChild } from "@angular/core";
-import { Router } from "@angular/router";
-import { alert, prompt } from "tns-core-modules/ui/dialogs";
-import { Page } from "tns-core-modules/ui/page";
+var PerfilViewModel = require("../../shared/view-models/perfil-view-model");
 
-import { User } from "../shared/user.model";
-import { UserService } from "../shared/user.service";
 
-@Component({
-    selector: "app-signup",
-    moduleId: module.id,
-    templateUrl: "./signup.component.html",
-    styleUrls: ['./signup.component.css']
-})
-export class SignupComponent {
-    isLoggingIn = true;
-    user: User;
-    @ViewChild("password") password: ElementRef;
-    @ViewChild("confirmPassword") confirmPassword: ElementRef;
+var dialogsModule = require("ui/dialogs");
+var frameModule = require("ui/frame");
 
-    constructor(private page: Page, private userService: UserService, private router: Router) {
-        this.page.actionBarHidden = true;
-        this.user = new User();
-        // this.user.email = "foo2@foo.com";
-        // this.user.password = "foo";
-    }
+var UserViewModel = require("../../shared/view-models/perfil-view-model");
+var perfil = new PerfilViewModel();
 
-    toggleForm() {
-        this.isLoggingIn = !this.isLoggingIn;
-    }
+exports.loaded = function(args) {
+    console.log("hello");
+    page=args.object;
+    page.bindingContext = perfil;
+};
 
-    submit() {
-        if (!this.user.email || !this.user.password) {
-            this.alert("Please provide both an email address and password.");
-            return;
-        }
-        this.register();
-        this.router.navigate(["/home"]);
-    }
-    login() {
-        this.router.navigate(["/signface"]);
-    }
+exports.login = function() {
+    var topmost = frameModule.topmost();
+    topmost.navigate("views/login/login");
+    var page;
+    var email;
+};
 
-    register() {
-        this.userService.register(this.user)
-            .then(() => {
-                this.alert("Your account was successfully created.");
-                this.isLoggingIn = true;
-            })
-            .catch(() => {
-                this.alert("Unfortunately we were unable to create your account.");
-            });
-    }
+exports.signFacebook = function() {
+    alert("Signup Facebook");
+};
 
-    alert(message: string) {
-        return alert({
-            title: "APP NAME",
-            okButtonText: "OK",
-            message: message
+function completeRegistration() {
+    perfil.signup()
+        .then(function() {
+            dialogsModule
+                .alert("Your account was successfully created.")
+                .then(function() {
+                    frameModule.topmost().navigate("views/login/login");
+                });
+        }).catch(function(error) {
+            console.log(error);
+            dialogsModule
+                .alert({
+                    message: "Unfortunately we were unable to create your account.",
+                    okButtonText: "OK"
+                });
         });
-    }
 }
+
+exports.signup = function() {
+    completeRegistration();
+};
