@@ -1,0 +1,41 @@
+<Page>
+	<ActionBar class="action-bar">
+		<GridLayout columns="auto,auto,auto">
+			<Image tap="scanBarcode()" horizontalAlignment="left" width="16" ios:marginLeft="8" marginRight="10" src="~/images/FlechaBlanca.png"
+			 row="0" col="0"></Image>
+			<Image horizontalAlignment="left" width="36" ios:marginRight="24" android:marginRight="15" marginLeft="10" src="~/images/IsotipoBlanco.png"
+			 row="0" col="2"></Image>
+			<Image tap="scanBarcode()" horizontalAlignment="right" width="20" ios:marginRight="24" android:marginRight="45" marginLeft="240"
+			 src="~/images/InfoBlanco.png" row="0" col="3"></Image>
+		</GridLayout>
+	</ActionBar>
+	<FlexboxLayout class="page">
+
+		<StackLayout class="form">
+
+			<StackLayout class="input-field">
+
+				<TextField class="input" hint="Correo electronico" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
+
+				<StackLayout class="hr-light"></StackLayout>
+			</StackLayout>
+
+			<StackLayout class="input-field">
+
+				<TextField class="input" hint="Contraseña" secure="true"></TextField>
+
+				<StackLayout class="hr-light"></StackLayout>
+			</StackLayout>
+			<StackLayout>
+				<Button text='INICIAR SESIÓN' class="btn btn-primary m-t-20" tap="inicio"></Button>
+				<Button text="Olvidaste tu contraseña?" class="login-label" tap="forgotPassword"></Button>
+			</StackLayout>
+			<Label class="login-label1">
+            <FormattedString>
+                <Span text='Eres nuevo en Facinema?'></Span>
+            </FormattedString>
+        </Label>
+                <Button text='REGISTRATE' class="login-label"></Button>
+      </StackLayout>
+	</FlexboxLayout>
+</Page>
