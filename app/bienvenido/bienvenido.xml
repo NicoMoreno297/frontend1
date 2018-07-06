@@ -1,0 +1,13 @@
+<Page>
+    <StackLayout orientation="vertical">
+        <Image src="res://flechagris" stretch="none" horizontalAlignment="left" ></Image>
+        <Image src="res://logomorado" stretch="none" horizontalAlignment="center" ></Image>
+        <Image src="res://infogris" stretch="none" horizontalAlignment="right" ></Image>
+        <Label class="lblBienvenido" text="Bienvenido a"></Label>
+        <Label  class="lblBienvenido" text="FILMOOD"></Label>
+        <Label class="espacio lbl2" text="Reconocemos tu estado de"></Label>
+        <Label class="lbl2" text="ánimo y te recomendamos"></Label>
+        <Label class="espacio2 lbl2" text="las mejores películas"></Label>
+        <Button text="Empezar" tap="tapAction"></Button>
+    </StackLayout>
+</Page>
