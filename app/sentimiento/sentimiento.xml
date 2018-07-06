@@ -1,0 +1,13 @@
+<Page>
+    <StackLayout>
+        <Image src="res://flechagris" stretch="none" horizontalAlignment="left" ></Image>
+        <Image src="res://logomorado" stretch="none" horizontalAlignment="center" ></Image>
+        <Image src="res://infogris" stretch="none" horizontalAlignment="right" ></Image>
+        <Label class="lblBienvenido" text="Según nuestra"></Label>
+        <Label  class="lblBienvenido" text="cámara hoy"></Label>
+        <Label class="espacio lblBienvenido" text="te sientes"></Label>
+        <Button text="Triste"></Button>
+        <Button text="Enojado"></Button>
+        <Button text="Ninguno" tap="tapAction"></Button>
+    </StackLayout>
+</Page>

@@ -1,0 +1,25 @@
+label{
+    color: #CECCD3;
+    text-align: center;
+    font-family: "RubikRegular";
+}
+.lblBienvenido{
+    font-size: 30%;
+}
+.lbl2{
+    font-size: 20%;
+}
+button{
+    background-color: #4F38C8;
+    color: white;
+}
+.espacio{
+    padding-top: 30px;
+}
+.espacio2{
+    padding-bottom: 30px;
+}
+@font-face{
+    font-family: 'RubikRegular';
+    src: url('RubikRegular.ttf');
+}
