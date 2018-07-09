@@ -1,0 +1,32 @@
+<Page>
+	<ActionBar class="action-bar">
+		<GridLayout columns="auto,auto,auto">
+			<Image horizontalAlignment="left" width="36" ios:marginRight="24" android:marginRight="10" marginLeft="10" src="~/images/IsotipoBlanco.png"
+			 row="0" col="2"></Image>
+			<Image tap="scanBarcode()" horizontalAlignment="right" width="20" ios:marginRight="24" android:marginRight="45" marginLeft="220"
+			 src="~/images/InfoBlanco.png" row="0" col="3"></Image>
+		</GridLayout>
+	</ActionBar>
+	<FlexboxLayout class="page">
+
+		<StackLayout class="form">
+
+			<StackLayout>
+
+				<Label text="Nueva Contraseña" class="header"></Label>
+				<Label text="Te enviaremos un correo con tu " class="sub"></Label>
+				<Label text="nueva contraseña " class="sub1"></Label> 
+			</StackLayout>
+			<StackLayout class="input-field">
+
+				<TextField class="input" hint="Correo electronico" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
+
+				<StackLayout class="hr-light"></StackLayout>
+			</StackLayout>
+
+			<StackLayout>
+				<Button text='Enviar' class="btn btn-primary m-t-20"></Button>
+			</StackLayout>
+		</StackLayout>
+	</FlexboxLayout>
+</Page>
