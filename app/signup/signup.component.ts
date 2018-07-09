@@ -7,6 +7,12 @@ var frameModule = require("ui/frame");
 var UserViewModel = require("../../shared/view-models/perfil-view-model");
 var perfil = new PerfilViewModel();
 
+var page;
+var nombre;
+var mail;
+var password;
+var edad;
+
 exports.loaded = function(args) {
     console.log("hello");
     page=args.object;
@@ -43,5 +49,10 @@ function completeRegistration() {
 }
 
 exports.signup = function() {
+    nombre = page.getViewById("nombre");
+    mail = page.getViewById("mail");
+    password = page.getViewById("password");
+    edad = page.getViewById("edad");
+    completeRegistration();
     completeRegistration();
 };

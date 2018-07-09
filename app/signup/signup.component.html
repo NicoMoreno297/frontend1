@@ -1,31 +1,31 @@
-<FlexboxLayout class="page">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"  class="page" loaded="loaded">
+              
 	<StackLayout class="form">
-		<Image class="logo" src="~/images/logo1.jpg"></Image>
-		<Label class="header" text="MOVIE TV"></Label>
-
+	<FlexboxLayout class="horizontal">
+		<Button text="Iniciar Seción" class="link" tap="login"></Button>
+		<Label class="lbl"  ></Label>
+	</FlexboxLayout>
+		
+	   <Image class="logo" src="~/images/LogoBlanco.png"></Image>
+		
 		<StackLayout class="input-field">
-			<TextField class="input" hint="Email" keyboardType="email" autocorrect="false" autocapitalizationType="none" [(ngModel)]="user.email"
-			 returnKeyType="next" (returnPress)="focusPassword()"></TextField>
+			<TextField class="input" hint="Usuario" text="{{nombre}}" id="nombre" autocorrect="false" returnKeyType="next" ></TextField>
 			<StackLayout class="hr-light"></StackLayout>
 		</StackLayout>
-
 		<StackLayout class="input-field">
-			<TextField #password class="input" hint="Password" secure="true" [(ngModel)]="user.password" [returnKeyType]="isLoggingIn ? 'done' : 'next'"></TextField>
+			<TextField class="input" hint="Año de nacimiento" text="{{edad}}" id="edad" autocorrect="false" returnKeyType="next" ></TextField>
 			<StackLayout class="hr-light"></StackLayout>
 		</StackLayout>
-
 		<StackLayout class="input-field">
-			<TextField class="input" hint="Nombre" secure="false" [(ngModel)]="user.nombre" [returnKeyType]="isLoggingIn ? 'done' : 'next'"></TextField>
+			<TextField class="input" hint="Correo electrónico" text="{{mail}}" id="mail" autocorrect="false" returnKeyType="next" ></TextField>
 			<StackLayout class="hr-light"></StackLayout>
 		</StackLayout>
-
 		<StackLayout class="input-field">
-			<TextField class="input" hint="Edad" secure="false" [(ngModel)]="user.edad" [returnKeyType]="isLoggingIn ? 'done' : 'next'"></TextField>
+		   <TextField class="input" hint="Contraseña" text="{{password}}" secure="true" id="password" autocorrect="false" returnKeyType="next" ></TextField>
 			<StackLayout class="hr-light"></StackLayout>
-		</StackLayout>
-
-		<Button [text]="isLoggingIn ? 'Sign Up' : 'Sign Up'" (tap)="submit()" class="btn btn-primary m-t-20"></Button>
-		<Button text="Sign up with facebook" (tap)="login()" class="btn btn-sec m-t-20"></Button>
-	</StackLayout>
-
-</FlexboxLayout>
+	   </StackLayout>
+		<Button text='REGISTRARSE' class="btn-morado" tap="signup"></Button>
+		<Button text='Registrarse con Facebook' class="btn-azul"></Button>
+   </StackLayout>
+	
+</Page>

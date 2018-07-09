@@ -1,30 +1,35 @@
-import { Component, ElementRef, ViewChild } from "@angular/core";
-import { Router } from "@angular/router";
-import { alert, prompt } from "tns-core-modules/ui/dialogs";
-import { Page } from "tns-core-modules/ui/page";
+var frameModule = require("ui/frame");
+var cont;
+exports.home = function() {
+    frameModule.topmost().navigate("views/home/home");
+};
 
-import { User } from "../shared/user.model";
-import { UserService } from "../shared/user.service";
 
-@Component({
-    selector: "app-pregunta1",
-    moduleId: module.id,
-    templateUrl: "./pregunta1.component.html",
-    styleUrls: ['./pregunta1.component.css']
-})
-export class Pre1Component {
-    isLoggingIn = true;
-    user: User;
-    
+var firstSwitchState = "OFF";
+exports.onFirstChecked(args)=function() {
+        if (firstSwitch.checked) {
+            this.firstSwitchState = "ON";
+            cont=cont+1;
+        } else {
+            this.firstSwitchState = "OFF";
+        }
+        console.log(firstSwitchState);
+}
 
-    constructor( private router: Router) {
-        this.user = new User();
-        // this.user.email = "foo2@foo.com";
-        // this.user.password = "foo";
-    }
-
-    submit() {
-        this.router.navigate(["/pregunta2"]);
-    }
-
+exports.ingresarResultados()=function(){
+    perfil.resultados()
+    .then(function() {
+        dialogsModule
+            
+            .then(function() {
+                frameModule.topmost().navigate("views/home/home");
+            });
+    }).catch(function(error) {
+        console.log(error);
+        dialogsModule
+            .alert({
+                message: "Error",
+                okButtonText: "OK"
+            });
+    });
 }
