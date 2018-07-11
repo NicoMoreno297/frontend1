@@ -1,0 +1,49 @@
+<Page>
+	<ActionBar class="action-bar">
+		<GridLayout columns="auto,auto,auto">
+			<Image horizontalAlignment="left" width="36" ios:marginRight="24" android:marginRight="10" marginLeft="10" src="~/images/IsotipoMorado.png"
+			 row="0" col="2"></Image>
+			<Image tap="scanBarcode()" horizontalAlignment="right" width="20" ios:marginRight="24" android:marginRight="45" marginLeft="220"
+			 src="~/images/InfoGris.png" row="0" col="3"></Image>
+		</GridLayout>
+	</ActionBar>
+	<FlexboxLayout class="page">
+
+		<StackLayout class="form">
+			<Label text="Selecciona tus" class="header1" row="0"></Label>
+			<Label text="generos favoritos " class="header1" row="0"></Label>
+			<ScrollView orientation="vertical">				
+				<StackLayout orientation="vertical">
+					<StackLayout orientation="horizontal" class="form">
+					<Image class="imagen" ios:marginRight="4" android:marginRight="5" src="~/images/terror1.jpg" ></Image>
+					<Switch checked="false" (checkedChange)="onFirstChecked($event)"width="5" margin="0" />
+					</StackLayout>
+					<StackLayout orientation="horizontal">
+					<Image  class="imagen" ios:marginRight="4" android:marginRight="5"  src="~/images/romance1.jpg"></Image>
+					<Switch checked="false" (checkedChange)="onFirstChecked($event)" width="5" margin="0" />
+					</StackLayout>
+					<StackLayout orientation="horizontal" class="form">
+						<Image class="imagen" ios:marginRight="4" android:marginRight="5"  src="~/images/accion1.jpg"></Image>
+						<Switch checked="false" (checkedChange)="onFirstChecked($event)"width="5" margin="0" />
+					</StackLayout>
+					<StackLayout orientation="horizontal">
+						<Image class="imagen" ios:marginRight="4" android:marginRight="5" src="~/images/suspenso1.jpg"></Image>
+						<Switch checked="false" (checkedChange)="onFirstChecked($event)" width="5" margin="0" />
+					</StackLayout>
+					<StackLayout orientation="horizontal" class="form">
+						<Image class="imagen" ios:marginRight="4" android:marginRight="5" src="~/images/comedia1.jpg"></Image>
+						<Switch checked="false" (checkedChange)="onFirstChecked($event)" width="5" margin="0" />
+					</StackLayout>
+					<StackLayout orientation="horizontal" class="form">
+						<Image class="imagen" ios:marginRight="4" android:marginRight="5" src="~/images/drama1.jpg"></Image>
+						<Switch checked="false" (checkedChange)="onFirstChecked($event)" width="5" margin="0" />
+					</StackLayout>
+				</StackLayout>
+			</ScrollView>
+
+		</StackLayout>
+		<StackLayout>
+			<Button text='Continuar' class="btn btn-primary m-t-20"></Button>
+		</StackLayout>
+	</FlexboxLayout>
+</Page>
