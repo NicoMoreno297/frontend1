@@ -1,32 +1,92 @@
-import { Component, ElementRef, ViewChild } from "@angular/core";
-import { Router } from "@angular/router";
-import { alert, prompt } from "tns-core-modules/ui/dialogs";
-import { Page } from "tns-core-modules/ui/page";
+var PerfilViewModel = require("../../shared/view-models/perfil-view-model");
+var dialogsModule = require("ui/dialogs");
+var frameModule = require("ui/frame");
+var fetchModule = require("fetch");
+var config = require("../../shared/config");
 
-import { User } from "../shared/user.model";
-import { UserService } from "../shared/user.service";
+var page = require("ui/page");
+var perfil = new PerfilViewModel();
 
-@Component({
-    selector: "app-pregunta10",
-    moduleId: module.id,
-    templateUrl: "./pregunta10.component.html",
-    styleUrls: ['./pregunta10.component.css']
-})
-export class Pre10Component {
-    isLoggingIn = true;
-    user: User;
-    @ViewChild("password") password: ElementRef;
-    @ViewChild("confirmPassword") confirmPassword: ElementRef;
 
-    constructor(private page: Page, private userService: UserService, private router: Router) {
-        this.page.actionBarHidden = true;
-        this.user = new User();
-        // this.user.email = "foo2@foo.com";
-        // this.user.password = "foo";
-    }
+exports.loaded = function(args) {
+    console.log("hello");
+    page=args.object;
+    //page.bindingContext = perfil;
+};
 
-    submit() {
-        this.router.navigate(["/signup"]);
-    }
 
+function enviar(){
+    return fetchModule.fetch( config.apiUrl+"cuestionario", {
+        method: "POST",
+        body: JSON.stringify({
+            puntos :page.getViewById("numpuntos").text
+        })
+    })
 }
+
+
+function handleErrors(response) {
+    if (!response.ok) {
+        console.log(JSON.stringify(response));
+        throw Error(response.statusText);
+    }
+    return response;
+}
+
+function completeRegistration() {
+    enviar()
+        .then(function() {
+            dialogsModule
+                .alert(""+ JSON.stringify({
+                    puntos :page.getViewById("numpuntos").text
+                }))
+                .then(function() {
+                    frameModule.topmost().navigate("views/home/home");
+                });
+        }).catch(function(error) {
+            console.log(error);
+            dialogsModule
+                .alert({
+                    message: "Desafortunadamente no pudimos creartu cuenta.",
+                    okButtonText: "OK"
+                });
+        });
+}
+
+exports.validar = function() {
+    completeRegistration();
+    //perfil.signup();
+};
+
+
+
+/*
+function completeRegistration() {
+
+    
+        console.log(edad);
+
+        return fetchModule.fetch( config.apiUrl+"ingresoperfil", {
+            method: "POST",
+            body: JSON.stringify({
+                mail: this.mail,
+                edad: this.edad,
+                nombre: this.edad,
+                password: this.password
+            })
+        })
+        .then(function() {
+            dialogsModule
+                .alert("Tu cuenta fue creada exitosamente.")
+                .then(function() {
+                    frameModule.topmost().navigate("views/seleccion/seleccion");
+                });
+        }).catch(function(error) {
+            console.log(error);
+            dialogsModule
+                .alert({
+                    message: "Desafortunadamente no pudimos creartu cuenta.",
+                    okButtonText: "OK"
+                });
+        });
+    };*/
