@@ -1,0 +1,44 @@
+
+<Page>
+	<ActionBar class="action-bar">
+		<GridLayout columns="auto,auto,auto">
+			<Label text="Sugerencia" class="sub1"></Label>
+			<Image tap="scanBarcode()" horizontalAlignment="right" width="20" ios:marginRight="24" android:marginRight="45" marginLeft="190"
+			 src="~/images/InfoGris.png" row="0" col="3"></Image>
+		</GridLayout>
+	</ActionBar>
+	<FlexboxLayout class="page">
+
+		<StackLayout class="form">
+			<ScrollView orientation="vertical">
+				<StackLayout orientation="vertical">
+					
+        
+					<StackLayout orientation="horizontal" class="form">
+						<Image class="imagen" ios:marginRight="4" android:marginRight="5" src="~/images/TheRain.jpg"></Image>
+						<StackLayout orientation="vertical">
+							<Label text="The Rain" class="sub"></Label>
+                            <Label text="1 Temporada - 8 Cap." class="sub2"></Label>
+							<Label text="16+" class="sub2"></Label>
+							<Label text="Acción - post apocaliptíca" class="sub2"></Label>
+							<Button text="Sinopsis" class="bt"></Button>
+							<Button text='LINK' class="btn-primary"></Button>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout orientation="horizontal">
+						<Image class="imagen" ios:marginRight="4" android:marginRight="5" src="~/images/TheRain.jpg"></Image>
+						<StackLayout orientation="vertical">
+							<Label text="The Rain" class="sub"></Label>
+							<Label text="1 Temporada - 8 Cap." class="sub2"></Label>
+							<Label text="16+" class="sub2"></Label>
+							<Label text="Acción - post apocaliptíca" class="sub2"></Label>
+							<Button text="Olvidaste tu contraseña?" class="bt" tap="sip"></Button>
+							<Button text='LINK' class="btn-primary"></Button>
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
+			</ScrollView>
+
+		</StackLayout>
+	</FlexboxLayout>
+</Page>
