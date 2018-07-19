@@ -1,0 +1,27 @@
+<Page>
+	<ActionBar class="action-bar">
+		<GridLayout columns="auto,auto,auto">
+			<Image class="im1" horizontalAlignment="left" src="~/images/IsotipoMorado.png" row="0" col="2"></Image>
+			<Button tap="info" horizontalAlignment="right" class="info" row="0" col="3" text=""></Button>
+		</GridLayout>
+	</ActionBar>
+	<FlexboxLayout class="page">
+
+		<StackLayout class="form">
+			<Label text="¿Do you worry about" class="header"></Label>
+			<Label text="having to perform tasks" class="header2"></Label>
+			<Label text="that are necessary but that " class="header2"></Label>
+			<Label text="prevent you perform task" class="header2"></Label>
+			<Label text="that truly you interesting?" class="header2"></Label>
+			<Label text="" class="header1"></Label>
+
+		</StackLayout>
+		<StackLayout>
+			<Button text='YES' class="btn-primary" tap="si"></Button>
+			<Button text='NO' class="btn-primary1" tap="no"></Button>
+		</StackLayout>
+		<StackLayout>
+			<Progress value="66" maxValue="100" class="p" />
+		</StackLayout>
+	</FlexboxLayout>
+</Page>

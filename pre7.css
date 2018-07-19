@@ -1,0 +1,71 @@
+.page {
+    flex-direction: column;
+    background-color: white;
+
+  }
+.action-bar
+  {
+      background-color: white;
+  }
+.im1{
+    height: 30;
+    margin-left: 10%;
+  }
+  .info { 
+    background-image: url("~/images/InfoGris.png");
+    background-size: 100% 100%;
+    width: 20%;
+    height: 20%;
+    margin-left: 270;
+  }
+  .form {
+    flex-grow: 2;
+    vertical-align: middle;
+  }
+ .header {
+    font-size: 25%;
+    font-weight: 300;
+    margin-top: 15%;
+    text-align: center;
+    color:#7e7b7b;
+  }
+  .header2 {
+    font-size: 25%;
+    font-weight: 300;
+    text-align: center;
+    color:#7e7b7b;
+  }
+  .header1 {
+    font-size: 25%;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 10%;
+    color:#7e7b7b;
+  }
+  .btn-primary {
+    height: 18%;
+    margin: 8% 14% 5% 14%;
+    background-color: #512DA8;
+    border-radius: 5%;
+    font-size: 20%;
+    font-weight: 600;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 10%;
+    color: #ffffff;
+  }
+  .btn-primary1 {
+    height: 18%;
+    margin: 8% 14% 5% 14%;
+    background-color: #512DA8;
+    border-radius: 5%;
+    font-size: 20%;
+    font-weight: 600;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 13%;
+    color: #ffffff;
+  }
+  .p{
+    margin-bottom: 13%;
+  }
