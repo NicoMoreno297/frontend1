@@ -1,0 +1,25 @@
+<Page>
+	<ActionBar class="action-bar">
+		<GridLayout columns="auto,auto,auto">
+			<Label text="Sugerencia" class="sub2"></Label>
+			<Button tap="info" horizontalAlignment="right" width="20" ios:marginRight="24" android:marginRight="45" marginLeft="190"
+			 class="info" row="0" col="3" text=""></Button>
+		</GridLayout>
+	</ActionBar>
+	<FlexboxLayout class="page">
+
+		<StackLayout class="form">
+				<StackLayout orientation="vertical">
+						<Image class="imagen" src="~/images/TheRain.jpg"></Image>
+						<StackLayout orientation="vertical">
+							<Label text="{{title}}" id="title" class="sub"></Label>
+							<Label text="{{year}}" id="year" class="sub2"></Label>
+							<Label text="{{genres}}" id="genres" class="sub2"></Label>
+							<Label text="{{runtime}}" id="runtime" class="sub2"></Label>
+							<Label text="{{synopsis}}" id="synopsis" class="sub1"></Label>							
+							<Button text='LINK' class="btn-primary"></Button>
+						</StackLayout>
+				</StackLayout>
+		</StackLayout>
+	</FlexboxLayout>
+</Page>

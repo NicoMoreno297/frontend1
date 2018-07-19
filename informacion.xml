@@ -1,0 +1,41 @@
+<Page>
+	<ActionBar class="action-bar">
+		<GridLayout columns="auto,auto,auto">
+			<Label text="Information" class="sub"></Label>
+		</GridLayout>
+	</ActionBar>
+	<FlexboxLayout class="page">
+		<StackLayout class="form">		
+		<ScrollView orientation="vertical">
+			<StackLayout orientation="vertical">
+				<Label text="Filmood suggests movies" class="header"></Label>
+				<Label text="or series according" class="header2"></Label>
+				<Label text="to your mood." class="header1"></Label>
+				<StackLayout orientation="horizontal" class="form">
+					<Image class="imagen" src="~/images/uno.png"></Image>
+					<Label text="Take a selfie." class="header2"></Label>
+				</StackLayout>
+				<Image class="imagen1" src="~/images/inf1.png"></Image>
+				<StackLayout orientation="horizontal">
+					<Image class="imagen" src="~/images/dos.png"></Image>
+					<Label text="Answer the confirmation" class="header2"></Label>
+				</StackLayout>
+				<Label text="question." class="header2"></Label>
+				<Image class="imagen1" src="~/images/inf2.png"></Image>
+				<StackLayout orientation="horizontal" class="form">
+					<Image class="imagen" src="~/images/tres.png"></Image>
+					<Label text="Choose the movie or " class="header2"></Label>
+				</StackLayout>
+				<Label text="series of your preference." class="header2"></Label>
+				<Image class="imagen2" src="~/images/inf3.png"></Image>
+				<StackLayout orientation="horizontal">
+					<Image class="imagen" src="~/images/cuatro.png"></Image>
+					<Label text="Enjoy your movie or" class="header2"></Label>
+				</StackLayout>
+				<Label text="series according to your mood." class="header2"></Label>
+				<Image class="imagen1" src="~/images/inf4.png"></Image>
+			</StackLayout>
+		</ScrollView>
+		</StackLayout>
+	</FlexboxLayout>
+</Page>

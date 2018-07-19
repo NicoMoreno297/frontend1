@@ -1,0 +1,32 @@
+<Page>
+	<ActionBar class="action-bar">
+		<GridLayout columns="auto,auto,auto">
+			<Label text="Profile" class="sub2"></Label>
+			<Button tap="info" horizontalAlignment="right" class="info" row="0" col="3" text=""></Button>
+		</GridLayout>
+	</ActionBar>
+	<FlexboxLayout class="page">
+
+		<StackLayout class="form">
+			<StackLayout orientation="vertical">
+				<Button class="imagen" text="" tap="foto"></Button>
+				<StackLayout orientation="vertical">
+					<Label text="{{nombre}}" id="nombre" class="sub"></Label>
+                    <StackLayout orientation="horizontal">
+                        <Label text="Year of birth" class="sub2"></Label>
+                        <Label text="{{year}}" id="year" class="sub1"></Label>
+                    </StackLayout>
+					<StackLayout orientation="horizontal">
+						<Label text="Mail" class="sub2"></Label>
+						<Label text="{{mail}}" id="mail" class="sub1"></Label>
+					</StackLayout>
+					<StackLayout orientation="horizontal">
+						<Label text="Country" class="sub2"></Label>
+						<Label text="{{pais}}" id="pais" class="sub1"></Label>
+					</StackLayout>
+					<Button text='Sign off' class="btn-primary"></Button>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+	</FlexboxLayout>
+</Page>

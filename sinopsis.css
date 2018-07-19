@@ -1,0 +1,67 @@
+.page {
+    flex-direction: column;
+     background-color: rgb(10, 10, 10);
+  }
+.action-bar
+  {
+      background-color: rgb(10, 10, 10);
+  }
+
+  .form {
+    flex-grow: 2;
+    vertical-align: middle;
+  }
+  .imagen {    
+    width: 140;
+    margin-left: 20;
+    margin-top: 10;
+  }
+  .sub {
+    margin-top: 25;
+    font-size: 25;
+    color:#ffffff;
+  }
+  .sub2 {
+    font-size: 15;
+    color:#ffffff;
+  }
+  .sub1 {
+    font-size: 12;
+    color:#ffffff;
+  }
+  .input-field {
+    margin-left: 50;
+    margin-right: 50;
+    margin-bottom: 20;
+  }
+  .input {
+    padding: 30;
+    font-size: 18;
+    placeholder-color: #ffffff;
+  }  
+  .btn-primary {
+    height: 35;
+    margin: 30 5 15 5;
+    background-color: #512DA8;
+    border-radius: 5;
+    font-size: 15;
+    font-weight: 400;
+    margin-top: 5;
+    margin-left: 50;
+    margin-right: 50;
+  }
+  .bt {
+    color: #ffffff;
+    font-size: 16;
+    align-content: left;
+    margin-bottom: 0;
+  }
+  
+  .login-label1 {
+    color: #ffffff;
+   font-size: 16;
+    margin-bottom: 0;
+  }  
+  .bold {
+    color: #f7f2f2; 
+  }
