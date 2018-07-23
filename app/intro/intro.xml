@@ -1,0 +1,23 @@
+<Page>
+	<ActionBar class="action-bar">
+		<GridLayout columns="auto,auto,auto">
+			<Image class="im1" horizontalAlignment="left" src="~/images/IsotipoMorado.png" row="0" col="2"></Image>
+			<Button tap="info" horizontalAlignment="right" class="info" row="0" col="3" text=""></Button>
+		</GridLayout>
+	</ActionBar>
+	<FlexboxLayout class="page">
+
+		<StackLayout class="form">
+			<Label text=" Help us " class="header1" ></Label>
+			<Label text="to meet you " class="header1" ></Label>
+
+			<Label text="Answer the following " class="header"></Label>
+			<Label text="questions " class="header2"></Label>
+
+		</StackLayout>
+		<StackLayout>
+			<Button text='Starts' class="btn btn-primary m-t-20" tap="inicio"></Button>
+			<Button text="Skip" class="login-label" tap="omitir"></Button>
+		</StackLayout>
+	</FlexboxLayout>
+</Page>
